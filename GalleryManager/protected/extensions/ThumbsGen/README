@@ -1,0 +1,38 @@
+Version 1.0
+
+	To use the ThumbsGen:
+	1) Extract archive in your extensions folder
+	2) In the site root create a folder named "images" if it not exist and extract your images
+
+	3)  in components part of config/main.php put this code
+            'ThumbsGen' => array(
+                  'class' => 'application.extensions.MyImageEdit.MyImageEdit',
+            ),
+
+            Alternatively you could put this code in your controller that have to generate the thumbnails
+
+            Yii::app()->setComponents(array('ThumbsGen' => array(
+                'class' => 'ext.ThumbsGen.ThumbsGen',
+            )));
+
+
+       4)  Not you can generate the thumbnails in Controller by this code
+            Yii::app()->ThumbsGen->createThumbnails();
+
+       5) If you want to get the full pathname of thumbnails in array, call Yii::app()->ThumbsGen->getThumbsUrl();
+
+         Notes: You could use this components with full parameters issue (initializing):
+
+         Yii::app()->setComponents(array('ThumbsGen' => array(
+          'class' => 'ext.ThumbsGen.ThumbsGen',
+          'scaleResize' => null, //if it is not null $thumbWidth and $thumbHeight will be ommited. for example 'scaleResize'=>0.5 generate image with half dimension
+          //one of $thumbWidth or $thumbHeight is optional but not both!
+          'thumbWidth' => 200, //the width of created thumbnail on pixel. if height is null the aspect ratio will be reserved
+          'thumbHeight' => null, //the height of created thumbnail on pixel. if width is null the aspect ratio will be reserved
+          'baseSourceDir' =>  Yii::getPathOfAlias('webroot.images'), //the main direcory of source images. if set to null the destination dir is the <webroot>/images
+          'baseDestDir' =>  Yii::getPathOfAlias('webroot.images.thumbs'), //the main direcory of thumbnails. if set to null the destination dir is the <webroot>/images/thumbs
+          'postFixThumbName' => '_thumb', //the postfix name of thumbnail for example if it set = '_thumb' then  image1.jpg become image1_thumb.jpg
+          'nameImages' => array('*'), //the names of images into $baseSourceDir, for example ('01.jpg','03.jpg'). the asterisk means all files jpg/jpeg, png or gif
+          'recreate' => true, //force to create each thumbnail either exist or not, when is set to false the tumbnails created only in the first time
+          )));
+

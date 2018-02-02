@@ -12,7 +12,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
@@ -32,7 +32,7 @@
 
 <body style="background-color: #152836;">
 <?php
- include('Other/localhost/DBConnection.php'); 
+ include('Other/uvpce_server/DBConnection.php'); 
  include('Other/MyLib.php');
  ?>
 
@@ -96,14 +96,18 @@ while($row = mysqli_fetch_array($rs))
 
 
   
+
 }
+
 ?>
+
+
 </div></div>
 
 
 <hr></hr>
  
-
+<div style="font-family: cursive;color: white;"> Made with <i class="fa fa-heart" aria-hidden="true" style="color:#be1931"></i> By Nirav Patel</div>
  </div>
 
 

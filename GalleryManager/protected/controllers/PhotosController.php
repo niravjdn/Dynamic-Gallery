@@ -152,6 +152,13 @@ class PhotosController extends Controller
             $path = substr($path,0,strlen($path)-10);
             $model->delete();
             unlink($path.'/img/'.$model->photo_name);
+            //unlink($path.'/img/thumbs/'.$model->photo_name);
+            if (file_exists($path.'/img/thumbs/'.$model->photo_name))  {
+				  unlink($path.'/img/thumbs/'.$model->photo_name);
+				}
+				
+				
+
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));

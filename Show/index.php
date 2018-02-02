@@ -32,7 +32,7 @@
 
 <body style="background-color: #152836;">
 <?php
- include('Other/uvpce_server/DBConnection.php'); 
+ include('Other/localhost/DBConnection.php'); 
  include('Other/MyLib.php');
  ?>
 

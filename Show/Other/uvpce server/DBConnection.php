@@ -1,8 +1,8 @@
 <?php
-DEFINE('DB_USER','uvpceac_con2016');
-DEFINE('DB_PWD','VZ%xd^*AhdMh');
+DEFINE('DB_USER','');
+DEFINE('DB_PWD','');
 DEFINE('DB_HOST','localhost');
-DEFINE('DB_NAME','uvpceac_convo2016');
+DEFINE('DB_NAME','');
 
 	$con=mysqli_connect(DB_HOST,DB_USER,DB_PWD,DB_NAME);
 	if($con)

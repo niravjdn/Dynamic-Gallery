@@ -1,7 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 <title>Gallary of Convergence 2017</title>
 <link href="style.css" rel="stylesheet" > 
 
@@ -15,11 +19,13 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-
+	
     <script src="js/lightgallery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/lightgallery.css">
     <!-- lightgallery plugins -->
     <script src="js/lg-thumbnail.min.js"></script>
+
+     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 <style type="text/css">
   #exTab2 h3 {
   color : white;
@@ -41,7 +47,7 @@
 <div class="cont">
   <div class="page-head">
     <h1>The Glimpse of Cheerful Moments of Convergence 2017</h1>
-    
+   
 <div id="exTab2" class="container"> 
 <ul class="nav nav-tabs">
 
@@ -103,14 +109,20 @@ while($row = mysqli_fetch_array($rs))
 
 
 </div></div>
+<
 
 
-<hr></hr>
  
-<div style="font-family: cursive;color: white;"> Made with <i class="fa fa-heart" aria-hidden="true" style="color:#be1931"></i> By Nirav Patel</div>
+
  </div>
 
 
+<footer class="footer" style="background-color: #152836">
+	
+      <div class="container">
+        <span class="text-muted"><div style="font-family: cursive;color: white;"> Made with <i class="fa fa-heart" aria-hidden="true" style="color:#be1931"></i> By Nirav Patel</div></span>
+      </div>
+    </footer>
 </body>
 <script type="text/javascript">
   $(document).ready(function() {

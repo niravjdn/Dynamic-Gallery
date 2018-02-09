@@ -130,8 +130,14 @@ class CategoryController extends Controller
                 //process each item here
                 $temp=$item['photo_name'];
                 unlink($path.'/img/'.$temp);
-            }
 
+                if (file_exists($path.'/img/thumbs/'.$temp))  {
+				  unlink($path.'/img/thumbs/'.$temp);
+				}
+            }
+            $sql = "delete from `tbl_photos` where  `photo_category`='".$dlt."' ";
+            Yii::app()->db->createCommand($sql)->query();
+            
 			$this->loadModel($id)->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser

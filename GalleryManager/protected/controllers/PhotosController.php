@@ -9,7 +9,7 @@ class PhotosController extends Controller
 	public $layout='//layouts/column2';
 
 	/**
-	 * @return array action filters
+	 * @retfurn array action filters
 	 */
 	public function filters()
 	{
